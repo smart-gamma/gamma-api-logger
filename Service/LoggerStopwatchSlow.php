@@ -1,8 +1,8 @@
 <?php
 
-namespace Gamma\Framework\Service;
+namespace Gamma\ApiLogger\Service;
 
-use Symfony\Component\HttpKernel\Log\LoggerInterface;
+use Psr\Log\LoggerInterface;
 use Symfony\Component\Stopwatch\Stopwatch;
 use Symfony\Component\Stopwatch\StopwatchEvent;
 
@@ -10,7 +10,7 @@ use Symfony\Component\Stopwatch\StopwatchEvent;
  * Wrapper for basic Symfony's Stopwatch service
  * It adds logging functionality for slow API calls
  */
-class LoggerStopwatchSlow extends LoggerStopwatch implements LoggerInterface
+class LoggerStopwatchSlow extends LoggerStopwatch implements LoggerStopwatchInterface
 {
     const EVENT_PREFIX = 'slow:';
 

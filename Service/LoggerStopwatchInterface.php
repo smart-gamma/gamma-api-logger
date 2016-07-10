@@ -1,6 +1,6 @@
 <?php
 
-namespace Gamma\Framework\Service;
+namespace Gamma\ApiLogger\Service;
 
 use Symfony\Component\Stopwatch\Stopwatch;
 use Symfony\Component\Stopwatch\StopwatchEvent;
