@@ -1,0 +1,24 @@
+{
+    "name": "gamma/api-logger",
+    "description": "provides tools for API requests logging",
+    "type": "symfony-bundle",
+    "version": "master",
+    "require": {
+        "php": ">=5.3",
+        "symfony/framework-bundle": "~2.3|~3.0"
+    },
+    "require-dev": {
+        "phpspec/phpspec": "^2.5",
+        "memio/spec-gen": "^0.4"
+    },
+    "authors": [
+        {
+            "name": "Eugen Kuzmin",
+            "email": "jekccs@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-0": { "Gamma\\ApiLogger": "" }
+    },
+    "target-dir": "Gamma/ApiLogger"
+}
