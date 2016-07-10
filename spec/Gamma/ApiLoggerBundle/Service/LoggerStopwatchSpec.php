@@ -17,12 +17,12 @@ class LoggerStopwatchSpec extends ObjectBehavior
 
     function it_is_initializable()
     {
-        $this->shouldHaveType('Gamma\ApiLogger\Service\LoggerStopwatch');
+        $this->shouldHaveType('Gamma\ApiLoggerBundle\Service\LoggerStopwatch');
     }
 
     function it_implements_stopwatch_logger_interface()
     {
-        $this->shouldImplement('Gamma\ApiLogger\Service\LoggerStopwatchInterface');
+        $this->shouldImplement('Gamma\ApiLoggerBundle\Service\LoggerStopwatchInterface');
     }
 
     function let(Stopwatch $stopwatch, LoggerInterface $logger, StopwatchEvent $event)

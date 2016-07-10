@@ -17,7 +17,7 @@ class TrackDurationListenerSpec extends ObjectBehavior
     
     function it_is_initializable()
     {
-        $this->shouldHaveType('Gamma\ApiLogger\Listener\TrackDurationListener');
+        $this->shouldHaveType('Gamma\ApiLoggerBundle\Listener\TrackDurationListener');
     }
 
     function let(LoggerStopwatch $loggerStopwatch)
