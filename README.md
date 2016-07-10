@@ -60,3 +60,18 @@ parameters:
 parameters:
    gamma_logger_enabled: false
 ```
+
+##Usage
+
+Once the bundle was enabled, it will start to make logging all requests that have prefix "/api/" in URI to the log as shown on the sample
+
+![logging]
+
+All API calls will be logged with "info" level.
+API calls that will take more then "gamma_logger_slow_time_limit" value will be logged with "error" level  
+
+##TODO
+
+1. make hardcoded prefix "/api/" configurable 
+
+[logging]: http://smart-gamma.com/files/2016-07/smart-gamma-logger-api-log.png
