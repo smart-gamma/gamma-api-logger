@@ -1,6 +1,6 @@
 <?php
 
-namespace Gamma\ApiLogger\Service;
+namespace Gamma\ApiLoggerBundle\Service;
 
 use Psr\Log\LoggerInterface;
 use Symfony\Component\Stopwatch\Stopwatch;

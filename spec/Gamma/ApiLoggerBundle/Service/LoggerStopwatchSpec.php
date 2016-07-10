@@ -1,6 +1,6 @@
 <?php
 
-namespace spec\Gamma\ApiLogger\Service;
+namespace spec\Gamma\ApiLoggerBundle\Service;
 
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;

@@ -1,5 +1,5 @@
 {
-    "name": "gamma/api-logger",
+    "name": "gamma/api-logger-bundle",
     "description": "provides tools for API requests logging",
     "type": "symfony-bundle",
     "version": "master",
@@ -18,7 +18,7 @@
         }
     ],
     "autoload": {
-        "psr-0": { "Gamma\\ApiLogger": "" }
+        "psr-0": { "Gamma\\ApiLoggerBundle": "" }
     },
-    "target-dir": "Gamma/ApiLogger"
+    "target-dir": "Gamma/ApiLoggerBundle"
 }

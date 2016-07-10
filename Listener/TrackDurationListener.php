@@ -1,6 +1,6 @@
 <?php
 
-namespace Gamma\ApiLogger\Listener;
+namespace Gamma\ApiLoggerBundle\Listener;
 
 use Symfony\Component\HttpKernel\Event\GetResponseEvent;
 use Symfony\Component\HttpKernel\Event\FilterResponseEvent;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Gamma\ApiLogger;
+namespace Gamma\ApiLoggerBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

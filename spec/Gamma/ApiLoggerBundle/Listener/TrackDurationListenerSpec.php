@@ -1,12 +1,12 @@
 <?php
 
-namespace spec\Gamma\ApiLogger\Listener;
+namespace spec\Gamma\ApiLoggerBundle\Listener;
 
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 use Symfony\Component\HttpKernel\Event\GetResponseEvent;
 use Symfony\Component\HttpKernel\Event\FilterResponseEvent;
-use Gamma\ApiLogger\Service\LoggerStopwatch;
+use Gamma\ApiLoggerBundle\Service\LoggerStopwatch;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 

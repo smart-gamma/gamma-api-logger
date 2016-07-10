@@ -1,6 +1,6 @@
 <?php
 
-namespace spec\Gamma\ApiLogger\Service;
+namespace spec\Gamma\ApiLoggerBundle\Service;
 
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
@@ -9,7 +9,7 @@ use spec\Memio\SpecGen\Marshaller\Model\ArgumentCollectionSpec;
 use spec\Prophecy\Exception\Prediction\AggregateExceptionSpec;
 use Symfony\Component\Stopwatch\Stopwatch;
 use Symfony\Component\Stopwatch\StopwatchEvent;
-use Gamma\ApiLogger\Service\LoggerStopwatchSlow;
+use Gamma\ApiLoggerBundle\Service\LoggerStopwatchSlow;
 
 class LoggerStopwatchSlowSpec extends ObjectBehavior
 {
