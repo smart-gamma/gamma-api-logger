@@ -1,8 +1,15 @@
 {
     "name": "gamma/api-logger-bundle",
-    "description": "provides tools for API requests logging",
+    "description": "provides tools for REST API requests logging and profoiling",
+    "keywords": [
+        "api",
+        "rest",
+        "logging",
+        "symfony2"
+    ],
     "type": "symfony-bundle",
     "version": "master",
+    "license": "MIT",
     "require": {
         "php": ">=5.3",
         "symfony/framework-bundle": "~2.3|~3.0"
