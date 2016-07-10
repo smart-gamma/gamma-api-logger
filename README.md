@@ -34,7 +34,7 @@ Now, Composer will automatically download all required files, and install them f
 // in AppKernel::registerBundles()
 $bundles = array(
     // ...
-    new Gamma\GammaApiLoggerBundle\GammaApiLoggerBundle(),
+    new Gamma\ApiLoggerBundle\GammaApiLoggerBundle(),
     // ...
 );
 ```
@@ -74,7 +74,7 @@ API calls that will take more then "gamma_logger_slow_time_limit" value will be 
 
 In order to have API calls logged in separate files, you can use follow monolog configuration:
 ```
-// confi.yml
+// config.yml
 monolog:
     handlers:
         main:
