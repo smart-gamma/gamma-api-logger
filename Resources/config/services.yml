@@ -28,6 +28,6 @@ services:
 
     gamma.logger.stopwatch.slow:
         class: Gamma\ApiLoggerBundle\Service\LoggerStopwatchSlow
-        arguments: [ @symfony.stopwatch.service, @logger, %stopwatch_enable%,  %gamma_logger_slow_time_limit%]
+        arguments: [ @symfony.stopwatch.service, @logger, %gamma_logger_enabled%,  %gamma_logger_slow_time_limit%]
         tags:
             - { name: monolog.logger, channel: api_slow }
