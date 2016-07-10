@@ -23,18 +23,19 @@ class TrackDurationListener
 
     /**
      * @param GetResponseEvent $event
+     * @return void | bool
      */
     public function onKernelRequest(GetResponseEvent $event)
     {
         if (!$event->isMasterRequest()) {
-            return;
+            return false;
         }
 
         $request = $event->getRequest();
         $this->uri   = $request->getRequestUri();
 
         if (!preg_match('/\/api/', $this->uri)) {
-            return;
+            return false;
         }
 
         $this->stopwatchLogger->start($this->uri);
@@ -62,10 +63,7 @@ class TrackDurationListener
         if($this->requestApiContent) {
             $params['request'] = $this->requestApiContent;
         }
-
-        if(preg_match('/\/api/', $this->uri)) {
-            $params['response'] = json_decode($response->getContent(), true);
-        }
+        $params['response'] = json_decode($response->getContent(), true);
 
         $this->stopwatchLogger->stop($this->getUri(), $params);
     }
@@ -76,5 +74,14 @@ class TrackDurationListener
     public function getUri()
     {
         return $this->uri;
+    }
+
+    /**
+     * @param $uri
+     * @return string
+     */
+    public function setUri($uri)
+    {
+        return $this->uri = $uri;
     }
 }
