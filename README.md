@@ -2,7 +2,7 @@
 
 ##About
 
-SmartGamma Symfony2 REST API Logger bundle enables detailed logging (possible to separate log) for incomming calls for your API and tracks the duration, requests and responses body. As additional feature it allows to profile your APIs and tracks slow API calls.
+SmartGamma Symfony2 REST API Logger bundle is a tool that used to create [SmartGamma Symfony2 REST APIs](http://smart-gamma.com/).It enables detailed logging (possible to separate log) for incomming calls for your API and tracks the duration, requests and responses body. As additional feature it allows to profile your APIs and tracks slow API calls.
 
 ##Installation
 
