@@ -70,6 +70,30 @@ Once the bundle was enabled, it will start to make logging all requests that hav
 All API calls will be logged with "info" level.
 API calls that will take more then "gamma_logger_slow_time_limit" value will be logged with "error" level  
 
+### Logging to separate log file
+
+In order to have API calls logged in separate files, you can use follow monolog configuration:
+```
+// confi.yml
+monolog:
+    handlers:
+        main:
+            type:         fingers_crossed
+            action_level: error
+            handler:      nested
+            channels:     ["!api", "!api_slow"]
+        api:
+            type: stream
+            path: %kernel.logs_dir%/%kernel.environment%.api.watch.log
+            #level: info
+            channels: ["api"]
+        api_slow:
+            type: stream
+            path: %kernel.logs_dir%/%kernel.environment%.api.slow.log
+            level: info
+            channels: ["api_slow"]
+```
+
 ##TODO
 
 1. make hardcoded prefix "/api/" configurable 
