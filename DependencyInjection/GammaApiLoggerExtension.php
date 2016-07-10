@@ -7,7 +7,7 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\DependencyInjection\ConfigurableExtension;
 use Symfony\Component\DependencyInjection\Loader;
 
-class GammaFrameworkExtension extends ConfigurableExtension
+class GammaApiLoggerExtension extends ConfigurableExtension
 {
     /**
      * {@inheritdoc}
