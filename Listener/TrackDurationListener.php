@@ -9,11 +9,12 @@ class TrackDurationListener
 {
     private $stopwatchLogger;
     private $uri;
-    private $requestApiContent;
-    private $requestMethod;
+    private $requestApiContentRaw;
+    private $requestApiContentForm;
 
     /**
      * TrackDurationListener constructor.
+     *
      * @param $stopwatchLogger
      */
     public function __construct($stopwatchLogger)
@@ -23,7 +24,6 @@ class TrackDurationListener
 
     /**
      * @param GetResponseEvent $event
-     * @return void | bool
      */
     public function onKernelRequest(GetResponseEvent $event)
     {
@@ -32,7 +32,7 @@ class TrackDurationListener
         }
 
         $request = $event->getRequest();
-        $this->uri   = $request->getRequestUri();
+        $this->uri = $request->getRequestUri();
 
         if (!preg_match('/\/api/', $this->uri)) {
             return false;
@@ -42,9 +42,15 @@ class TrackDurationListener
         $this->requestMethod = $request->getMethod();
         $receivedRawData = $request->getContent();
 
-        if($receivedRawData) {
+        if ($receivedRawData) {
             $parsedData = json_decode($receivedRawData, true);
-            $this->requestApiContent = $parsedData;
+            $this->requestApiContentRaw = $parsedData;
+        }
+
+        $receivedFormData = $request->request->all();
+
+        if (sizeof($receivedFormData)) {
+            $this->requestApiContentForm = urldecode(http_build_query($receivedFormData));
         }
     }
 
@@ -58,10 +64,13 @@ class TrackDurationListener
         }
 
         $params = array('method' => $this->requestMethod);
-        $response  = $event->getResponse();
+        $response = $event->getResponse();
 
-        if($this->requestApiContent) {
-            $params['request'] = $this->requestApiContent;
+        if ($this->requestApiContentRaw) {
+            $params['RawRequest'] = $this->requestApiContentRaw;
+        }
+        if ($this->requestApiContentForm) {
+            $params['FormRequest'] = $this->requestApiContentForm;
         }
         $params['response'] = json_decode($response->getContent(), true);
 
@@ -78,6 +87,7 @@ class TrackDurationListener
 
     /**
      * @param $uri
+     *
      * @return string
      */
     public function setUri($uri)
