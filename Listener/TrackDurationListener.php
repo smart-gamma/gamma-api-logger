@@ -9,6 +9,7 @@ class TrackDurationListener
 {
     private $stopwatchLogger;
     private $uri;
+    private $requestMethod;
     private $requestApiContentRaw;
     private $requestApiContentForm;
 
