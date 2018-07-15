@@ -8,7 +8,7 @@
         "symfony2"
     ],
     "type": "symfony-bundle",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "license": "MIT",
     "require": {
         "php": ">=5.3",
@@ -20,11 +20,11 @@
     },
     "authors": [
         {
-            "name":     "SmartGamma",
-            "homepage": "http://smar-gamma.com"
+            "name":     "Smart Gamma",
+            "homepage": "http://smart-gamma.com"
         },
         {
-            "name": "Eugen Kuzmin",
+            "name": "Eugeniy Kuzmin",
             "email": "jekccs@gmail.com"
         }
     ],

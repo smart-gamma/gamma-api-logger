@@ -1,4 +1,4 @@
-# SmartGamma API Logger Bundle
+# Smart Gamma API Logger Bundle
 
 [![Build Status](https://travis-ci.org/smart-gamma/gamma-api-logger.svg?branch=master)](https://travis-ci.org/smart-gamma/gamma-api-logger)
 
