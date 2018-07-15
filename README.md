@@ -11,7 +11,7 @@ SmartGamma Symfony2 REST API Logger bundle is a tool that we use to create [Smar
 1. Using Composer
 
 ```
-php require --dev gamma/api-logger-bundle
+composer require --dev gamma/api-logger-bundle
 ```
 
 Now, Composer will automatically download all required files, and install them for you. All that is left to do is to update your AppKernel.php file, and register the new bundle:
