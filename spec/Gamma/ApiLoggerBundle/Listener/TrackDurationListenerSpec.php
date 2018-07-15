@@ -83,6 +83,8 @@ class TrackDurationListenerSpec extends ObjectBehavior
     ) {
         $response->getContent()->willReturn('TestResponseContent');
         $response->getContent()->shouldBeCalled();
+        $response->getStatusCode()->willReturn(200);
+        $response->getStatusCode()->shouldBeCalled();
         $event->isMasterRequest()->willReturn(true);
         $event->getResponse()->willReturn($response);
 
