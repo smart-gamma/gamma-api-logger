@@ -25,8 +25,12 @@ class LoggerStopwatchSlow extends LoggerStopwatch implements LoggerStopwatchInte
      * @param bool            $stopwatchEnabled
      * @param int             $slowTimeLimit
      */
-    public function __construct(Stopwatch $stopwatch, LoggerInterface $logger, $stopwatchEnabled = false, $slowTimeLimit)
-    {
+    public function __construct(
+        Stopwatch $stopwatch,
+        LoggerInterface $logger,
+        $stopwatchEnabled = false,
+        $slowTimeLimit = 1000
+    ) {
         $this->slowTimeLimit = $slowTimeLimit;
         parent::__construct($stopwatch, $logger, $stopwatchEnabled);
     }
